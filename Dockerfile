@@ -4,6 +4,8 @@ FROM python:3.11-slim
 # Set the working directory in the container
 WORKDIR /src-backend
 
+COPY src-backend/requirements.txt .
+
 # Install system dependencies needed by Ollama and other tools
 RUN apt-get update && apt-get install -y curl
 
